@@ -5,7 +5,7 @@
 
 [sub_resource type="Animation" id="Animation_d7jif"]
 resource_name = "new_animation"
-length = 0.8
+length = 5.1
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
