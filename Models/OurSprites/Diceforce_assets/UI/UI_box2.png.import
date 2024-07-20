@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqp2q1cn2vqnk"
-path="res://.godot/imported/Fire_Totem_blue-Sheet.png-2cb9e624fc0b74584c53a3db8a69e9b9.ctex"
+uid="uid://camjhhfyesk46"
+path="res://.godot/imported/UI_box2.png-89a06199d2bdcdb99a82aa9d888392b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fire_Totem_blue-Sheet.png"
-dest_files=["res://.godot/imported/Fire_Totem_blue-Sheet.png-2cb9e624fc0b74584c53a3db8a69e9b9.ctex"]
+source_file="res://Models/OurSprites/Diceforce_assets/UI/UI_box2.png"
+dest_files=["res://.godot/imported/UI_box2.png-89a06199d2bdcdb99a82aa9d888392b6.ctex"]
 
 [params]
 
