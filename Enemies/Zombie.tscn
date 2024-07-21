@@ -60,10 +60,9 @@ position = Vector2(1, -9)
 texture = ExtResource("2_pyqo1")
 
 [node name="Zomvie walk" type="AnimatedSprite2D" parent="CharacterBody2D/Zombie1Attack0"]
-visible = false
 sprite_frames = SubResource("SpriteFrames_4siba")
 animation = &"new_animation"
-frame_progress = 0.536665
+frame_progress = 0.386501
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CircleShape2D_6mb3d")
