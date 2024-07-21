@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt8pdyud64cke"]
+
+[sub_resource type="Curve2D" id="Curve2D_cmpaw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 108, 51, 0, 0, 0, 0, 111, 332, 0, 0, 0, 0, 524, 335, 0, 0, 0, 0, 528, 563, 0, 0, 0, 0, 114, 565)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_2ddtf"]
+
+[node name="Path2D" type="Path2D"]
+curve = SubResource("Curve2D_cmpaw")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_2ddtf")
+
+[node name="PathSpawner" type="Node2D" parent="Path2D"]
