@@ -1,7 +1,52 @@
-[gd_scene load_steps=4 format=3 uid="uid://yfomjo70g5jn"]
+[gd_scene load_steps=13 format=3 uid="uid://yfomjo70g5jn"]
 
 [ext_resource type="Script" path="res://Scenes/Bad_Dudes.gd" id="1_d7pog"]
 [ext_resource type="Texture2D" uid="uid://bldrtnfwmhgbe" path="res://Models/OurSprites/RGS_Dev_Assets/Zombies/Zombie1/Zombie1_attack_0.png" id="2_pyqo1"]
+[ext_resource type="Texture2D" uid="uid://dkbs4stxkdl2o" path="res://Models/OurSprites/RGS_Dev_Assets/Zombies/Zombie1/Zombie1_run_0.png" id="3_7uh3k"]
+[ext_resource type="Texture2D" uid="uid://l3tcnj04tv10" path="res://Models/OurSprites/RGS_Dev_Assets/Zombies/Zombie1/Zombie1_run_1.png" id="4_pi1ul"]
+[ext_resource type="Texture2D" uid="uid://dcbll2qxfowjm" path="res://Models/OurSprites/RGS_Dev_Assets/Zombies/Zombie1/Zombie1_run_2.png" id="5_s71mp"]
+[ext_resource type="Texture2D" uid="uid://1csl5fnre356" path="res://Models/OurSprites/RGS_Dev_Assets/Zombies/Zombie1/Zombie1_run_3.png" id="6_7td8k"]
+[ext_resource type="Texture2D" uid="uid://bln5rjb3uk2d5" path="res://Models/OurSprites/RGS_Dev_Assets/Zombies/Zombie1/Zombie1_run_4.png" id="7_xp01v"]
+[ext_resource type="Texture2D" uid="uid://cx1mjnk3v2sir" path="res://Models/OurSprites/RGS_Dev_Assets/Zombies/Zombie1/Zombie1_run_5.png" id="8_1h6l4"]
+[ext_resource type="Texture2D" uid="uid://g25k6xswqhru" path="res://Models/OurSprites/RGS_Dev_Assets/Zombies/Zombie1/Zombie1_run_7.png" id="9_dfc3u"]
+[ext_resource type="Texture2D" uid="uid://c0s7kgl0dcgh7" path="res://Models/OurSprites/RGS_Dev_Assets/Zombies/Zombie1/Zombie1_run_6.png" id="10_pf032"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4siba"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7uh3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pi1ul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s71mp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7td8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xp01v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1h6l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dfc3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pf032")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6mb3d"]
 
@@ -13,6 +58,12 @@ script = ExtResource("1_d7pog")
 [node name="Zombie1Attack0" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(1, -9)
 texture = ExtResource("2_pyqo1")
+
+[node name="Zomvie walk" type="AnimatedSprite2D" parent="CharacterBody2D/Zombie1Attack0"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_4siba")
+animation = &"new_animation"
+frame_progress = 0.536665
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CircleShape2D_6mb3d")
