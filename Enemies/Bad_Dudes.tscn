@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://yfomjo70g5jn"]
+
+[ext_resource type="Script" path="res://Scenes/Bad_Dudes.gd" id="1_d7pog"]
+[ext_resource type="Texture2D" uid="uid://bldrtnfwmhgbe" path="res://Models/OurSprites/RGS_Dev_Assets/Zombies/Zombie1/Zombie1_attack_0.png" id="2_pyqo1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6mb3d"]
+
+[node name="Zombie" type="Node2D"]
+script = ExtResource("1_d7pog")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Zombie1Attack0" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(1, -9)
+texture = ExtResource("2_pyqo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_6mb3d")
