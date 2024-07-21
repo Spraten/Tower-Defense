@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dn44yw8b8l3lc"]
+[gd_scene load_steps=4 format=3 uid="uid://bmh0g2jegacqs"]
 
 [ext_resource type="PackedScene" uid="uid://c8x3soir5tvo3" path="res://Scenes/tile_mapv1.tscn" id="1_vs6f1"]
 [ext_resource type="Script" path="res://Scenes/PathSpawner.gd" id="2_cc6ag"]
+[ext_resource type="PackedScene" uid="uid://bwtnv2xmxkqr7" path="res://RedTower/Red_Tower.tscn" id="3_wqd7x"]
 
 [node name="Main" type="Node2D"]
+position = Vector2(936, 480)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(346, 242)
@@ -15,5 +17,10 @@ script = ExtResource("2_cc6ag")
 
 [node name="Timer" type="Timer" parent="PathSpawner"]
 autostart = true
+
+[node name="Towers" type="Node2D" parent="."]
+
+[node name="RedTower" parent="Towers" instance=ExtResource("3_wqd7x")]
+position = Vector2(464, 496)
 
 [connection signal="timeout" from="PathSpawner/Timer" to="PathSpawner" method="_on_timer_timeout"]
