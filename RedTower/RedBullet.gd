@@ -8,5 +8,7 @@ var bulletDamage
 
 
 func _physics_process(delta):
-	pass
+	var pathSpawnerNode = get_tree().get_root().get_node("Main/PathSpawner")
+	
+	for i in pathSpawnerNode.get_child
 	
