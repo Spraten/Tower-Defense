@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwtnv2xmxkqr7"]
+
+[ext_resource type="Script" path="res://RedTower/RedTower.gd" id="1_owi3k"]
+[ext_resource type="Texture2D" uid="uid://bvkttvkgj6mt0" path="res://Towers/Sprits/kenney_tower-defense-top-down/PNG/Default size/towerDefense_tile250.png" id="2_4jf32"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vq74c"]
+size = Vector2(29, 22)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tmm76"]
+radius = 156.029
+
+[node name="RedTower" type="StaticBody2D"]
+script = ExtResource("1_owi3k")
+
+[node name="Aim" type="Marker2D" parent="."]
+position = Vector2(15, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vq74c")
+
+[node name="Body" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4jf32")
+
+[node name="Range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+shape = SubResource("CircleShape2D_tmm76")
+
+[node name="BulletContainer" type="Node" parent="."]
+
+[connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
+[connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]
