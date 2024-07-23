@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bt8pdyud64cke"]
 
-[ext_resource type="PackedScene" uid="uid://yfomjo70g5jn" path="res://Enemies/Zombie.tscn" id="1_ckq10"]
+[ext_resource type="PackedScene" uid="uid://dc8j8aghaw1f0" path="res://Enemies/Zombie_1.tscn" id="2_7posg"]
 
 [sub_resource type="Curve2D" id="Curve2D_cmpaw"]
 _data = {
@@ -16,5 +16,4 @@ position = Vector2(108, 51)
 rotates = false
 loop = false
 
-[node name="Zombie" parent="PathFollow2D" instance=ExtResource("1_ckq10")]
-speed = null
+[node name="Zombie_1" parent="PathFollow2D" instance=ExtResource("2_7posg")]

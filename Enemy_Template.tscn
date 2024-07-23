@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dflaa88c68w0s"]
+[gd_scene load_steps=6 format=3 uid="uid://dflaa88c68w0s"]
+
+[ext_resource type="Texture2D" uid="uid://dmyg6y8rcems6" path="res://icon.svg" id="1_mldrb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7fg7f"]
 
@@ -12,6 +14,14 @@ animations = [{
 "frames": [],
 "loop": true,
 "name": &"Dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mldrb")
+}],
+"loop": true,
+"name": &"Default",
 "speed": 5.0
 }, {
 "frames": [],
@@ -40,7 +50,7 @@ shape = SubResource("CircleShape2D_7fg7f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8yxy8")
-animation = &"Dead"
+animation = &"Default"
 
 [node name="AttackArea" type="Area2D" parent="."]
 
