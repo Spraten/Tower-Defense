@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://dflaa88c68w0s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7fg7f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8yxy8"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Dead",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t3y3m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_00roj"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_7fg7f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8yxy8")
+animation = &"Dead"
+
+[node name="AttackArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+shape = SubResource("CircleShape2D_t3y3m")
+
+[node name="SpecialAttackArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpecialAttackArea"]
+shape = SubResource("CircleShape2D_00roj")

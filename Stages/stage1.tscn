@@ -13,6 +13,8 @@ curve = SubResource("Curve2D_cmpaw")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
 position = Vector2(108, 51)
-rotation = 1.56012
+rotates = false
+loop = false
 
 [node name="Zombie" parent="PathFollow2D" instance=ExtResource("1_ckq10")]
+speed = null
